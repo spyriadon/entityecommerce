@@ -18,4 +18,10 @@ head
 
     block scripts
         script(defer src=`/assets/logic/js/root.js?v=${ TIME }`)
-        script(defer src=`/logic/js/modules/analytics.js`)
+        script(async='', src='https://www.googletagmanager.com/gtag/js?id=UA-135780192-2')
+script.
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-135780192-2');
+
